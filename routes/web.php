@@ -1,26 +1,13 @@
 <?php
 
+Route::get('/',function(){
+	return view('welcome');
 
-Route::get('/', function () {
-
-	$notes = [
-		[
-			'title' => 'variables',
-			'body' => 'como se declaran e imprimen',
-			'important' => true
-
-		],
-		[
-			'title' => 'imprimir',
-			'body' => 'las variables con blade en laravel se imprimen en {{}}',
-			'important' => true
-
-		],
-
-	];
-
-    return view('welcome' , ['notes' => $notes]);
 });
+
+Route::get('/notes', 'NotesController@index');
+
+Route::get('/notes/{id}', 'NotesController@show');
 
 Route::get('/contact', function () {
 	
