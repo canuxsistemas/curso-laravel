@@ -1,11 +1,12 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Notas</title>
-</head>
-<body>
+@extends('layouts.app')
 
-<ul>
+@section('title')
+  Lista de Notas
+@endsection
+
+@section('content')
+
+  <ul>
  @foreach ($notes as $note)
 
                 <li> 
@@ -16,7 +17,7 @@
 
                     @if ($note->isImportant())
 
-						*
+            *
 
                     @endif
 
@@ -29,5 +30,4 @@
   @endforeach 
   </ul>
 
-</body>
-</html>
+@endsection

@@ -1,12 +1,12 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Nota</title>
-</head>
-<body>
+@extends('layouts.show')
 
-	<h1>{{ $note->title }}</h1>
-	<p>{{ $note->body }}</p>
-	
-</body>
-</html>
+@section('title')
+	Nota: {{ $note->title }}
+@endsection
+
+@section('content')
+
+<h1>{{ $note->title }}</h1>
+<p>{{ $note->body }}</p>
+
+@endsection
