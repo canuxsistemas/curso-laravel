@@ -1,9 +1,9 @@
+
 <!DOCTYPE html>
 <html>
 <head>
-    <title>@yield('title')</title>
-    <link rel="stylesheet" href="css/app.css" />
-</head>
+    <title>Editar Nota {{ $note->title }}</title>
+    <link rel="stylesheet" href="../css/app.css" />
 <body>
 
 <nav class="navbar navbar-default">
@@ -16,27 +16,14 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="http://localhost/notes/public/">{{ config('app.name') }}</a>
+      <a class="navbar-brand" href="notes">{{ config('app.name') }}</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="{{ Request::is('notes') ? 'active' : '' }} dropdown ">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">Notas<span class="sr-only">(current)</span></a>
-           <ul class="dropdown-menu">
-            <li><a href="notes">Ver</a></li>
-            <li><a href="notes/create">Crear</a></li>
-
-          </ul>
-        </li>
-
-
-        <li class="{{ Request::is('contact') ? 'active' : '' }}"><a href="contact">Contacto</a></li>
-
-
-
-
+        <li class="active"><a href="../notes">Notas<span class="sr-only">(current)</span></a></li>
+        <li><a href="../contact">Contacto</a></li>
        
       </ul>
     
@@ -52,7 +39,8 @@
     
 </div>
 
-<script src="js/app.js"></script>
+<script src="../js/app.js"></script>
     
 </body>
 </html>
+

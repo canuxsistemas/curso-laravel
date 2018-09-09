@@ -6,11 +6,18 @@
 
 @section('content')
 
-  <ul>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Nota</th>
+        <th>Editar</th>
+       </tr>
+    </thead>
+    <tbody> 
  @foreach ($notes as $note)
 
-                <li> 
-
+        <tr>
+          <td>
                    <a href="notes/{{ $note->id }}">
 
                     {{ $note->title }}
@@ -24,8 +31,13 @@
                       
                     </a>
 
-                </li>
-                   
+          </td>
+          <td>
+            
+              <a href="notes/{{ $note->id }}/edit" class="btn btn-primary">Editar</a>
+
+          </td>
+         </tr>          
 
   @endforeach 
   </ul>

@@ -7,7 +7,13 @@ Route::get('/',function(){
 
 Route::get('/notes', 'NotesController@index');
 
-Route::get('/notes/{id}', 'NotesController@show');
+Route::get('/notes/create','NotesController@create');
+
+Route::get('/notes/{note}', 'NotesController@show');
+
+Route::get('/notes/{note}/edit', 'NotesController@edit');
+
+Route::POST('/notes', 'NotesController@store');
 
 Route::get('/contact', function () {
 	
