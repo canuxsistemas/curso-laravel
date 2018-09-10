@@ -35,6 +35,14 @@ class NotesController extends Controller
 
     public function store()
     {
+
+        request()->validate([
+
+            'title' => 'required',
+            'body' => 'required|max:140',
+
+        ]);
+
     	Note::create(request()->all());
     	//$note = new Note;
     	//$note->title = request()->title;
@@ -56,6 +64,13 @@ class NotesController extends Controller
 
       public function update(Note $note)
     {
+
+         request()->validate([
+
+            'title' => 'required',
+            'body' => 'required|max:140',
+
+        ]);
 
         $note->update(request()->all());
 
