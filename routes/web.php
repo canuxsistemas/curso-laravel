@@ -13,6 +13,8 @@ Route::get('/notes/{note}', 'NotesController@show');
 
 Route::get('/notes/{note}/edit', 'NotesController@edit');
 
+Route::patch('/notes/{note}', 'NotesController@update');
+
 Route::POST('/notes', 'NotesController@store');
 
 Route::get('/contact', function () {

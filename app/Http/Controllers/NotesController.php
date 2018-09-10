@@ -54,4 +54,14 @@ class NotesController extends Controller
     
     }
 
+      public function update(Note $note)
+    {
+
+        $note->update(request()->all());
+
+        return redirect('notes');
+    
+    
+    }
+
 }

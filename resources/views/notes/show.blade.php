@@ -6,9 +6,14 @@
 
 @section('content')
 
-<h1>{{ $note->title }}</h1>
-<p>{{ $note->body }}</p>
 
-<a href="{{ $note->id }}/edit" class="btn btn-primary">Editar</a>
+
+
+<h1 class="text-primary"> {{ $note->title }} </h1>
+<p class="lead text-info" >{{ $note->body }}</p>
+
+
+
+<a href="{{ $note->id }}/edit" class="btn btn-primary btn-sm">Editar</a>
 
 @endsection

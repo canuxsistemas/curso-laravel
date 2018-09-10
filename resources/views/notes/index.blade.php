@@ -9,15 +9,15 @@
   <table class="table table-hover">
     <thead>
       <tr>
-        <th>Nota</th>
-        <th>Editar</th>
+        <th></th>
+        
        </tr>
     </thead>
     <tbody> 
  @foreach ($notes as $note)
 
-        <tr>
-          <td>
+        <tr class="active">
+          <td >
                    <a href="notes/{{ $note->id }}">
 
                     {{ $note->title }}
@@ -32,11 +32,7 @@
                     </a>
 
           </td>
-          <td>
-            
-              <a href="notes/{{ $note->id }}/edit" class="btn btn-primary">Editar</a>
-
-          </td>
+        
          </tr>          
 
   @endforeach 
