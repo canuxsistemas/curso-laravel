@@ -5,6 +5,9 @@
 @endsection
 
 @section('content')
+<h1>LISTA DE NOTAS</h1>
+<p>anotaciones personales de mis experiencias en el aprendizaje del 
+framework LARAVEL y despliegues en HEROKU. </p>
 
   <table class="table table-hover">
     <thead>

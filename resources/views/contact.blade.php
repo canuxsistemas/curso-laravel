@@ -1,11 +1,11 @@
 @extends('layouts.app')
 
 @section('title')
-	narvaezcarlos@gmail.com 
+	contacto 
 @endsection
 
 @section('content')
 
-<h1> Contacto </h1>
+<h1> narvaezcarlos@gmail.com </h1>
 
 @endsection

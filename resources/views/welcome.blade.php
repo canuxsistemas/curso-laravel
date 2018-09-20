@@ -6,6 +6,6 @@
 
 @section('content')
 
-  <h1>Bienvenido a tu libreta de Notas</h1>
+  <h1>Bienvenidos a mi libreta de notas</h1>
 
 @endsection
