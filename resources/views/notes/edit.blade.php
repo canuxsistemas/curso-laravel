@@ -35,7 +35,7 @@
 
 <div class="container">
 
-<form action="http://localhost/notes/public/notes/{{ $note->id }}" method="POST" role="form">
+<form action="/notes/{{ $note->id }}" method="POST" role="form">
 
 	{{ method_field('PATCH') }}
 
