@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-	Contacto
+	narvaezcarlos@gmail.com 
 @endsection
 
 @section('content')
