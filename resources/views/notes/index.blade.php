@@ -40,7 +40,7 @@ framework LARAVEL,despliegues en HEROKU y control de versiones en GITHUB. </p>
               {{ method_field('DELETE') }}
               {{ csrf_field() }}
 
-              <button type="submit" class="btn btn-danger btn-delete">Eliminar</button>
+              <button type="button" class="btn btn-danger btn-delete">Eliminar</button>
 
             </form>
 
@@ -57,13 +57,14 @@ framework LARAVEL,despliegues en HEROKU y control de versiones en GITHUB. </p>
 
   <script>
     
-    $('.btn-delete').on('click', function(e){
+    $('.btn-delete').on('click', function(e) {
 
       if(confirm('¿Está seguro de borrar la nota?')) {
 
         $(this).parents('form:first').submit();
 
       }
+
 
     });
 
