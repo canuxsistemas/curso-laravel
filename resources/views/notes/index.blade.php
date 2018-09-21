@@ -12,7 +12,7 @@ framework LARAVEL,despliegues en HEROKU y control de versiones en GITHUB. </p>
   <table class="table table-hover">
     <thead>
       <tr>
-        <th>Eliminar</th>
+        <th></th>
         
        </tr>
     </thead>
@@ -23,7 +23,7 @@ framework LARAVEL,despliegues en HEROKU y control de versiones en GITHUB. </p>
           <td >
                    <a href="notes/{{ $note->id }}">
 
-                    {{ $note->title }}
+                   <h4> {{ $note->title }} </h4>
 
                     @if ($note->isImportant())
 

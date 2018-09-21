@@ -6,11 +6,15 @@
 
 @section('content')
 
-
+<div class="jumbotron">
 <h1> {{ $note->title }} </h1>
-<p class="lead" >{{ $note->body }}</p>
+<div class="panel panel-default">
+  <div class="panel-body"><p class="lead" >{{ $note->body }}</p></div>
+</div>
+
+<p><a href="{{ $note->id }}/edit" class="btn btn-primary btn-sm">Editar</a></p>
+</div>
 
 
-<a href="{{ $note->id }}/edit" class="btn btn-primary btn-sm">Editar</a>
 
 @endsection
