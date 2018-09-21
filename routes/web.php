@@ -17,6 +17,8 @@ Route::patch('/notes/{note}', 'NotesController@update');
 
 Route::POST('/notes', 'NotesController@store');
 
+Route::delete('/notes/{note}', 'NotesController@destroy');
+
 Route::get('/contact', function () {
 	
     return view('contact');
