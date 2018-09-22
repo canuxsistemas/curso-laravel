@@ -27,7 +27,7 @@ framework LARAVEL,despliegues en HEROKU y control de versiones en GITHUB. </p>
 
                     @if ($note->isImportant())
 
-            *
+            * Importante
 
                     @endif
 
