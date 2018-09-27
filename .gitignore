@@ -10,3 +10,18 @@ Homestead.yaml
 npm-debug.log
 yarn-error.log
 .env
+
+
+<!--<div class="checkbox">
+    <label>
+        <input name="important" type="hidden" value="0">
+            <input $note-="" ''="" 'cheked'="" (!is_null(old('important')))="" ($note)="" :="" ?="" @else="" @if="" @isset="" name="important" old('important')="1" type="checkbox" value="1" {{="" }}="">
+                isImportant() ? 'checked' : '' }}	
+				    @endif
+				@endif    
+			 >
+			Es Importante
+            </input>
+        </input>
+    </label>
+</div>-->

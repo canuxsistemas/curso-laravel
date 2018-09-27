@@ -7,6 +7,8 @@ Route::get('/',function(){
 
 Route::get('/notes', 'NotesController@index');
 
+Route::get('/groups/{group}/notes', 'NotesController@index');
+
 Route::get('/notes/create','NotesController@create');
 
 Route::get('/notes/{note}', 'NotesController@show');

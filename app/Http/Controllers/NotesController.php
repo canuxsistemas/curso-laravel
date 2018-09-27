@@ -4,16 +4,18 @@ namespace App\Http\Controllers;
 
 
 use App\Note;
+use App\Group;
 use Illuminate\Http\Request;
 
 class NotesController extends Controller
 {
-    public function index()
+    public function index(Group $group)
     {
 
-    $notes = Note::all();
+    $groups = Group::all();
+    $notes = $group->notes;
 
-    return view('notes/index' , ['notes' => $notes]);
+    return view('notes/index' , compact('notes','groups'));
 
     }
 
@@ -28,14 +30,14 @@ class NotesController extends Controller
      public function create()
     {
 
-
-    return view('notes/create');
+    $groups = Group::all();
+    return view('notes/create', compact('groups'));
     
     }
 
     public function store()
     {
-
+        
         request()->validate([
 
             'title' => 'required',
@@ -57,8 +59,8 @@ class NotesController extends Controller
     public function edit(Note $note)
     {
 
-
-    return view('notes/edit',compact('note'));
+        $groups = Group::all();
+        return view('notes/edit',compact('note','groups'));
     
     }
 

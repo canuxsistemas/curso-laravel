@@ -1,62 +1,64 @@
-@extends('layouts.app')
+@extends('../layouts/app')
 
 @section('title')
   Lista de Notas
 @endsection
 
 @section('content')
-<h1>LISTA DE NOTAS</h1>
-<p>anotaciones personales de mis experiencias en el aprendizaje del 
-framework LARAVEL,despliegues en HEROKU y control de versiones en GITHUB. </p>
 
-  <table class="table table-hover">
+<div class="container">
+
+<section class="main row"> 
+
+<div class="col-xs-12 col-lg-9">   
+<table class="table table-hover">
     <thead>
-      <tr>
-        <th></th>
-        
-       </tr>
+        <tr>
+            <th>Lista de Notas</th>
+        </tr>
     </thead>
-    <tbody> 
- @foreach ($notes as $note)
-
+    <tbody>
+        @foreach ($notes as $note)
         <tr class="active">
-          <td >
-                   <a href="notes/{{ $note->id }}">
-
-                   <h4> {{ $note->title }} </h4>
-
+            <td>
+                <a href="notes/{{ $note->id }}">
+                    <h4>
+                        {{ $note->title }}
+                    </h4>
                     @if ($note->isImportant())
 
             * Importante
 
                     @endif
-
-                      
-                    </a>
-
-          </td>
-          <td>
-            <form action="/notes/{{ $note->id }}" method="POST">
-              {{ method_field('DELETE') }}
+                </a>
+            </td>
+            <td>
+                <form action="/notes/{{ $note->id }}" method="POST">
+                    {{ method_field('DELETE') }}
               {{ csrf_field() }}
+                    <button class="btn btn-danger btn-delete" type="button">
+                        Eliminar
+                    </button>
+                </form>
+            </td>
+        </tr>
+        @endforeach
+    </tbody>
+</table>
+</div>
 
-              <button type="button" class="btn btn-danger btn-delete">Eliminar</button>
 
-            </form>
+</section>
 
-          </td>
-        
-         </tr>          
 
-  @endforeach 
-  </ul>
+</div>
+
+
 
 @endsection
 
 @section('scripts')
-
-  <script>
-    
+<script>
     $('.btn-delete').on('click', function(e) {
 
       if(confirm('¿Está seguro de borrar la nota?')) {
@@ -67,7 +69,5 @@ framework LARAVEL,despliegues en HEROKU y control de versiones en GITHUB. </p>
 
 
     });
-
-  </script>
-
+</script>
 @endsection
