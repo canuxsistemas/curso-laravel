@@ -28,19 +28,9 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-          <li class="{{ Request::is('notes') ? 'active' : '' }} dropdown ">
-            <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">Notas<span class="sr-only">(current)</span></a>
-
-
-            <ul class="dropdown-menu">
-             @foreach ($groups as $group)
-             <li><a href="groups/{{ $group->id }}/notes">{{ $group->name }}</a></li>
-             @endforeach
-           </ul>
-
-
-         </li>
-
+         
+         
+        <li class="{{ Request::is('notes') ? 'active' : '' }}"><a href="../notes">Notas</a></li>
          <li class="{{ Request::is('notes/create') ? 'active' : '' }}"><a href="notes/create">Crear</a></li>
 
        </ul>
