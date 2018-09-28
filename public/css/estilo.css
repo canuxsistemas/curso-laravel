@@ -28,3 +28,9 @@ footer {
     font-weight: lighter;
     font-family:'Lato', sans-serif;
 }
+
+.bborrar {
+
+background: url('img/papelera.png') no-repeat;
+
+}

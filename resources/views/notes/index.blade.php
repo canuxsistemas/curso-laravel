@@ -37,8 +37,8 @@
                 <form action="/notes/{{ $note->id }}" method="POST">
                     {{ method_field('DELETE') }}
               {{ csrf_field() }}
-                    <button class="btn btn-danger btn-delete" type="button">
-                        Eliminar
+
+                    <button class="btn btn-delete" type="button"><img src="img/papelera.png" width="15" height="20">
                     </button>
                 </form>
             </td>
