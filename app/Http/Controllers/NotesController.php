@@ -13,7 +13,8 @@ class NotesController extends Controller
     {
 
     $groups = Group::all();
-    $notes = $group->notes;
+    $notes = Note::all();
+   // $notes = $group->notes;
 
     return view('notes/index' , compact('notes','groups'));
 

@@ -10,16 +10,17 @@
 
 <section class="main row"> 
 
-<div class="col-xs-12 col-lg-9">   
+  
 <table class="table table-hover">
     <thead>
         <tr>
-            <th>Lista de Notas</th>
+            <th>Lista de Notas:</th>
         </tr>
     </thead>
+
     <tbody>
         @foreach ($notes as $note)
-        <tr class="active">
+        <tr class="">
             <td>
                 <a href="notes/{{ $note->id }}">
                     <h4>

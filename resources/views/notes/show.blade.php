@@ -1,4 +1,4 @@
-@extends('layouts.show')
+@extends('layouts.app')
 
 @section('title')
 	Nota: {{ $note->title }}

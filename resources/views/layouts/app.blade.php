@@ -2,6 +2,8 @@
 <html>
 <head>
   <title>@yield('title')</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <!--<link rel="stylesheet" href="css/app.css" />-->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link rel="stylesheet" href="css/estilo.css">
@@ -11,44 +13,41 @@
 
 </head>
 <body>
-  <nav class="navbar navbar-inverse col-xs-12 col-lg-12">
-    
-    <div class="container">
-      <!-- Brand and toggle get grouped for better mobile display -->
+<nav class="navbar-inverse">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+       
+       <a class=" logo" href="#">
+        <img class="logo" alt="Brand" src="img/logo.png" width="50" height="50">
+      </a>
+   
 
-      <div class="navbar-header">
-       <img class="" src="img/logo.png" border="0" alt="logo Diseñado por Canux" width="50" height="50">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="http://localhost/notes/public/">{{ config('app.name') }}</a>
-  </div>
+      
+    </div>
 
-  <!-- Collect the nav links, forms, and other content for toggling -->
-  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-    <ul class="nav navbar-nav">
-
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="{{ Request::is('notes/create') ? 'active' : '' }}"><a href="notes/create">Escribir <span class="sr-only">(current)</span></a></li>
         <li class="dropdown">
-          <a href="../notes" class="dropdown-toggle" data-toggle="dropdown" role="button" id="dropdownMenuLink" aria-haspopup="true" aria-expanded="false">Archivo</a>
-
-            <ul class="dropdown-menu">
-              <li class="{{ Request::is('/notes/create') ? 'active' : '' }}"><a href="notes/create">Nueva Nota</a></li>
-              <li><a href="groups/create">Nuevo Grupo</a></li>
-           </ul>  
-       </li>
-
-        <li class="{{ Request::is('notes') ? 'active' : '' }}"><a href="notes">ver</a></li>
-        
-
-
-    </ul>
-
-</div><!-- /.navbar-collapse -->
-</div><!-- /.container-fluid -->
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Crear <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="groups/create">Nuevo Grupo</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
 </nav>
+
+<div class="container">
 
  @yield('content') <!-- /.insertar contenido -->
     
