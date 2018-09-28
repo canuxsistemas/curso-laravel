@@ -11,7 +11,7 @@
 
 </head>
 <body>
-  <nav class="navbar navbar-inverse">
+  <nav class="navbar navbar-inverse col-xs-12 col-lg-12">
     
     <div class="container">
       <!-- Brand and toggle get grouped for better mobile display -->
