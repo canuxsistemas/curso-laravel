@@ -116,6 +116,8 @@ return [
 		'username' => 'usuario',
 		'password' => 'contraseña',
 		'title' => 'Titulo',
-		'body' => 'Contenido'
+		'body' => 'Contenido',
+		'name' => 'Nombre',
+
 	],
 ];
