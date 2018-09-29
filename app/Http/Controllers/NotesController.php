@@ -46,7 +46,10 @@ class NotesController extends Controller
 
         ]);
 
-    	Note::create(request()->all());
+        $data = request()->all();
+        $data['user_id'] = \Auth::user()->id;
+
+    	$note = Note::create(request()->all());
     	//$note = new Note;
     	//$note->title = request()->title;
     	//$note->body = request()->body;
