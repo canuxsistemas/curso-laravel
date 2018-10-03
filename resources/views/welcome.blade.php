@@ -19,6 +19,7 @@
                      <li type="disc">2.Escribe pequeñas notas de 140 caracteres cuando tienes tu telefono a la mano y no un lapiz y papel.</li>
                      <li type="disc">NOTA esta plicación esta alojada en plataformas gratuitas por lo tanto ciertas funciones son limitadas como por ejemplo la recuperación de contraseña.</li>
                     </ul>
+                    Existen millones de WebApp como esta, pero esta... es la mia .|.
 
 				</div>
 				
