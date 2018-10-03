@@ -56,7 +56,7 @@
                                         <a href="{{ route('logout') }}"
                                             onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                            Logout
+                                            Salir
                                         </a>
 
                                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
@@ -85,7 +85,7 @@
     </div>
 </footer> 
 
-<script src="js/app.js"></script>
+<script src="/js/app.js"></script>
 
 @yield('scripts')
     
