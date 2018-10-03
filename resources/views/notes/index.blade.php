@@ -8,6 +8,46 @@
 <br>
 <div class="row">
 
+
+
+ @foreach ($notes as $note)
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="panel panel-default">
+            
+                <div class="container d-block p-2 bg-dark text-white">
+
+                    <h3>{{ $note->title }}</h3>
+
+                </div>
+
+                <div class="panel-body">
+                    {{ $note->body }}
+                </div>
+
+             <!--   <span class="label label-default text-right"></span> -->
+                  <div class="panel-body" align="right"> 
+                    <div class="">
+                        <form action="/notes/{{ $note->id }}" method="POST">
+                             {{ method_field('DELETE') }}
+                             {{ csrf_field() }}
+                          <a href="{{ $note->id }}/edit" class=""><img src="/img/editar.png" width="30" height="25"></a>
+                           <button class="btn btn-delete" type="button"><img src="/img/papelera.png" width="15" height="20">  
+                           </button>
+                            </form>  
+                    </div>
+                    <div>  
+                            
+        </div>
+                 </div>
+                
+            </div>  
+        </div>
+    </div>
+</div>  
+@endforeach 
+
     <div class="col-md-2">
      
         <h4>Grupo de Notas</h4>
@@ -22,44 +62,10 @@
         </ul> 
      </div>      
 
-<div class="col-md-10">
-    <table class="table table-hover">
-<thead>
-    <tr>
-        <th>Lista de Notas:</th>
-    </tr>
-       
-</thead>
 
-<tbody>
-    @foreach ($notes as $note)
-    <tr class="">
-        <td>
-            <a href="{{ $note->id }}">
-                <h4>
-                    {{ $note->title }}
-                </h4>
-                @if ($note->isImportant())
 
-        * Importante
 
-                @endif
-            </a>
-        </td>
-        <td>
-            <form action="/notes/{{ $note->id }}" method="POST">
-                {{ method_field('DELETE') }}
-          {{ csrf_field() }}
 
-                <button class="btn btn-delete" type="button"><img src="/img/papelera.png" width="15" height="20">
-                </button>
-            </form>
-        </td>
-    </tr>
-    @endforeach
-</tbody>
-</table>
-</div>
 
 </div>    
 
