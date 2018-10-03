@@ -5,17 +5,19 @@
 @endsection
 
 @section('content')
-
-<div class="jumbotron">
-
-<h1> {{ $note->title }} </h1>
-<div class="panel panel-default">
-  <div class="panel-body"><p class="lead" >{{ $note->body }}</p></div>
-</div>
-
-<p><a href="{{ $note->id }}/edit" class="btn btn-primary btn-sm">Editar</a></p>
-</div>
-
-
+<br>
+<div class="container">
+	<div class="row">
+		<div class="col-md-8 col-md-offset-2">
+			<div class="panel panel-default">
+				<div class="panel-heading"><h3>{{ $note->title }}</h3></div>
+				<div class="panel-body">
+					{{ $note->body }}
+				</div>
+				<p><a href="{{ $note->id }}/edit" class="btn btn-primary btn-sm btn-center">Editar</a></p>	
+			</div>	
+		</div>
+	</div>
+</div>	
 
 @endsection

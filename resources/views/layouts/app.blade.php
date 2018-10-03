@@ -36,12 +36,6 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li class="{{ Request::is('notes/create') ? 'active' : '' }}"><a href="/notes/create">Escribir <span class="sr-only">(current)</span></a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Crear <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="/groups/create">Nuevo Grupo</a></li>
-          </ul>
-        </li>
       </ul>
 
                         <ul class="nav navbar-nav navbar-right">
