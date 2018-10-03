@@ -53,7 +53,7 @@
         <h4>Grupo de Notas</h4>
 
         <ul class="list-group">
-                <li class="list-group-item"><a href="/groups/create">Crear</a></li>
+                <!--<li class="list-group-item"><a href="/groups/create">Crear</a></li>-->
                 <li class="list-group-item"><a href="/notes/all">Todas</a></li>
                 <li class="list-group-item"><a href="/notes/null">Ninguno</a></li>
             @foreach ($groups as $group)
