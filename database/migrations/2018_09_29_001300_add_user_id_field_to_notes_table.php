@@ -15,7 +15,7 @@ class AddUserIdFieldToNotesTable extends Migration
     {
         Schema::table('notes', function (Blueprint $table) {
 
-            $table->integer('user_id')->unsigned();
+            $table->integer('user_id')->unsigned()->after('group_id');
 
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });

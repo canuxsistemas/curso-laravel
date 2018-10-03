@@ -6,7 +6,9 @@
 
 @section('content')
 
+<div class="row">
 
+    <div class="col-xs-12 col-md-3 col-lg-4">
 <form action="../groups" method="POST" role="form">
     {{ csrf_field() }}
     <legend>
@@ -31,4 +33,7 @@
         Crear
     </button>
 </form>
+</div>
+</div>
 @endsection
+

@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!--<link rel="stylesheet" href="css/app.css" />-->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/estilo.css">
+  <link rel="stylesheet" href="../css/estilo.css">
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet">
  
 
@@ -18,8 +18,8 @@
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
        
-       <a class=" logo" href="#">
-        <img class="logo" alt="Brand" src="img/logo.png" width="50" height="50">
+       <a class=" logo" href="/notes/all">
+        <img class="logo" alt="Brand" src="/img/logo.png" width="50" height="50">
       </a>
    
 
@@ -35,11 +35,11 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="{{ Request::is('notes/create') ? 'active' : '' }}"><a href="notes/create">Escribir <span class="sr-only">(current)</span></a></li>
+        <li class="{{ Request::is('notes/create') ? 'active' : '' }}"><a href="/notes/create">Escribir <span class="sr-only">(current)</span></a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Crear <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="groups/create">Nuevo Grupo</a></li>
+            <li><a href="/groups/create">Nuevo Grupo</a></li>
           </ul>
         </li>
       </ul>
@@ -85,11 +85,11 @@
 <footer>
     <div class="container textfooter">
 
-       Libreta de Notas - Canux
+       Libreta de Notas - <a href="https://www.instagram.com/_canux/"> @_Canux </a>
     </div>
 </footer> 
 
-<script src="js/app.js"></script>
+<script src="http://localhost/notes/public/js/app.js"></script>
 
 @yield('scripts')
     

@@ -7,6 +7,7 @@
 @section('content')
 
 <div class="jumbotron">
+
 <h1> {{ $note->title }} </h1>
 <div class="panel panel-default">
   <div class="panel-body"><p class="lead" >{{ $note->body }}</p></div>

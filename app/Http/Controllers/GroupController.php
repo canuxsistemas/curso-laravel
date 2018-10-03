@@ -25,7 +25,8 @@ class GroupController extends Controller
      $group->name =request()->name;
      $group->save();
 
-     return redirect('notes');
+     return back();
+    // return redirect('notes/all');
     }
 
    

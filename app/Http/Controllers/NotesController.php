@@ -13,8 +13,8 @@ class NotesController extends Controller
     {
 
     $groups = Group::all();
-    $notes = Note::all();
-   // $notes = $group->notes;
+   // $notes = Note::all();
+     $notes = $group->notes;
 
     return view('notes/index' , compact('notes','groups'));
 
@@ -46,25 +46,18 @@ class NotesController extends Controller
 
         ]);
 
-        $data = request()->all();
-        $data['user_id'] = \Auth::user()->id;
-
-    	$note = Note::create(request()->all());
-    	//$note = new Note;
-    	//$note->title = request()->title;
-    	//$note->body = request()->body;
-    	//$note->important = is_null(request()->important) ? 0 : 1;
-    	//$note->save();
+        $note = new Note(request()->all());
+        \Auth::user()->notes()->save($note);
 
     	//return redirect('/notes');
-    	return back();
+    	return redirect('notes/all');
     }
 
     public function edit(Note $note)
     {
 
         $groups = Group::all();
-        return view('notes/edit',compact('note','groups'));
+        return view('/notes/edit',compact('note','groups'));
     
     }
 
@@ -80,7 +73,7 @@ class NotesController extends Controller
 
         $note->update(request()->all());
 
-        return redirect('notes');
+        return redirect('notes/all');
     
     
     }
@@ -89,7 +82,8 @@ class NotesController extends Controller
     {
         $note->delete();
 
-        return redirect('/notes');
+        return back();
+       // return redirect('notes/all');
     }
 
 }

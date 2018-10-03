@@ -5,7 +5,9 @@ Route::get('/',function(){
 
 });
 
-Route::get('/notes', 'NotesController@index');
+Route::get('/notes/null', 'NotesWithoutGroupController@index');
+
+Route::get('/notes/all', 'NotesAllGroupController@index');
 
 Route::get('/groups/create','GroupController@create');
 

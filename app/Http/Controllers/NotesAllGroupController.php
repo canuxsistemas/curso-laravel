@@ -6,13 +6,13 @@ use App\Note;
 
 use Illuminate\Http\Request;
 
-class NotesWithoutGroupController extends Controller
+class NotesAllGroupController extends Controller
 {
     public function index ()
     {
 
     	$groups = Group::all();
-    	$notes = Note::WithoutGroup()->get();
+    	$notes = Note::all();
 
     	return view('notes/index', compact('notes','groups'));
     }
