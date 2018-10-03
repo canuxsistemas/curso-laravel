@@ -26,7 +26,7 @@
                     {{ $note->body }}
                 </div>
 
-             <!--   <span class="label label-default text-right"></span> -->
+             <span class="label label-default text-right"></span>
                   <div class="panel-body" align="right"> 
                     <div class="">
                         <form action="/notes/{{ $note->id }}" method="POST">

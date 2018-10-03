@@ -81,7 +81,7 @@
 <footer>
     <div class="container textfooter">
 
-       Libreta de Notas - <a href="https://www.instagram.com/_canux/"> @_Canux </a>
+       si quieres decir algo escribe por -> <a href="https://www.instagram.com/_canux/"> @_Canux </a>
     </div>
 </footer> 
 

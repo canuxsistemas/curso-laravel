@@ -8,11 +8,12 @@ use Illuminate\Http\Request;
 
 class NotesAllGroupController extends Controller
 {
-    public function index ()
+    public function index (Group $group)
     {
 
     	$groups = Group::all();
     	$notes = \Auth::user()->notes()->get();
+    	
     	//$notes = Note::all();
 
     	return view('notes/index', compact('notes','groups'));
