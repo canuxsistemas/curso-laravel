@@ -34,9 +34,11 @@
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
+      @if (Auth::check())
+         <ul class="nav navbar-nav">
         <li class="{{ Request::is('notes/create') ? 'active' : '' }}"><a href="/notes/create">Escribir <span class="sr-only">(current)</span></a></li>
       </ul>
+      @endif
 
                         <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
@@ -83,7 +85,7 @@
     </div>
 </footer> 
 
-<script src="http://localhost/notes/public/js/app.js"></script>
+<script src="js/app.js"></script>
 
 @yield('scripts')
     

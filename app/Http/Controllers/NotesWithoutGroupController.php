@@ -12,7 +12,7 @@ class NotesWithoutGroupController extends Controller
     {
 
     	$groups = Group::all();
-    	$notes = Note::WithoutGroup()->get();
+    	$notes = \Auth::user()->notes()->WithoutGroup()->get();
 
     	return view('notes/index', compact('notes','groups'));
     }

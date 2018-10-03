@@ -13,8 +13,9 @@ class NotesController extends Controller
     {
 
     $groups = Group::all();
+    $notes = \Auth::user()->notes()->where('group_id' , $group->id)->get();
    // $notes = Note::all();
-     $notes = $group->notes;
+     //$notes = $group->notes()->where('user_id',\Auth::user()->id)->get();
 
     return view('notes/index' , compact('notes','groups'));
 
