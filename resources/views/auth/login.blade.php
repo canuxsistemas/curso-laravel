@@ -3,12 +3,15 @@
 @section('content')
 <br>
 <div class="container">
+
+
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
                 <div class="panel-heading">Iniciar sesión</div>
 
                 <div class="panel-body">
+
                     <form class="form-horizontal" method="POST" action="{{ route('login') }}">
                         {{ csrf_field() }}
 
@@ -59,7 +62,18 @@
                                 <a class="btn btn-link" href="{{ route('password.request') }}">
                                     ¿Olvido su contraseña?
                                 </a>
+
+                                 <div class="">
+                                    <br>
+                                <a class="btn btn-primary" href="">
+                                   Iniciar sesión usando Facebook
+                                </a>
+                           </div>
+
                             </div>
+
+
+                           
                         </div>
                     </form>
                 </div>

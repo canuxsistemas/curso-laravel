@@ -35,4 +35,12 @@ return [
         'secret' => env('STRIPE_SECRET'),
     ],
 
+    'facebook' => [
+       'client_id' => '306136363304941',
+       'client_secret' => '0bd6819c00468bf3ecf8d6ac99af8a11',
+       'redirect' => 'https://anotaloaqui.herokuapp.com/auth/facebook/callback'
+    ]
+
+
+
 ];
